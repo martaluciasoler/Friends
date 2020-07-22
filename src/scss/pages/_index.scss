@@ -1,7 +1,135 @@
-body {
+.container {
   list-style: none;
+  display: flex;
+  font-family: 'pacifico';
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: rgb(184, 68, 97);
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary;
+    width: 100%;
+    padding-bottom: 40px;
+
+    &--tittle {
+      font-size: 50px;
+      margin-right: 200px;
+      color: rgb(252, 196, 210);
+      padding-right: 50px;
+    }
+    &--set {
+      margin-right: 30px;
+      text-overflow: clip;
+      border-radius: 6px;
+      background-color: $color-primary;
+      border-color: white;
+      color: white;
+      font-family: 'pacifico';
+      height: 40px;
+      width: 100px;
+      font-family: 'Amatic SC', cursive;
+      font-size: 20px;
+    }
+    &--get {
+      margin-right: 30px;
+      text-overflow: clip;
+      border-radius: 6px;
+      background-color: $color-primary;
+      border-color: white;
+      color: white;
+      height: 40px;
+      width: 100px;
+      font-family: 'Amatic SC', cursive;
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    padding-right: 20px;
+
+    .list {
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+
+    .name {
+      color: white;
+    }
+    .city {
+      color: white;
+    }
+    .img {
+      border-radius: 100%;
+    }
+    .userName {
+      color: white;
+    }
+  }
 }
 
 .pink {
-  background-color: pink;
+  background-color: $color-primary;
+}
+
+//CORAZON
+.corazon {
+  background-color: rgb(184, 68, 97);
+  display: inline-block;
+  height: 50px;
+  margin: 0 10px;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 47%;
+  top: 8%;
+  width: 50px;
+}
+
+.corazon:before,
+.corazon:after {
+  content: '';
+  background-color: rgb(184, 68, 97);
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.corazon:before {
+  top: -25px;
+  left: 0;
+}
+
+.corazon:after {
+  left: 25px;
+  top: 0;
+}
+
+//LATIDO
+
+@keyframes latido {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  20% {
+    transform: scale(1.25) rotate(-45deg);
+  }
+  40% {
+    transform: scale(1.5) rotate(-45deg);
+  }
+}
+
+//ANIMACIÓN
+
+.corazon {
+  animation: latido 1s infinite; /* nuestro corazón tiene latidos infinitos */
 }

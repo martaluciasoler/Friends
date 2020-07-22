@@ -3,21 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
+    <title>Twitterlab</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Saira+Semi+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <div>
-      <h1>Twitterlab</h1>
-      <div>
-        <button>Guardar datos</button>
-        <button>Recuperar datos</button>
+    <div class="container">
+      <div class="container__buttons">
+        <h1 class="container__buttons--tittle">
+          Twitterlab <a class="corazon" href=""></a>
+        </h1>
+        <button class="js-setData container__buttons--set">
+          Guardar datos
+        </button>
+        <button class="js-getData container__buttons--get">
+          Recuperar datos
+        </button>
       </div>
-      <div>
+      <div class="container__list">
         <ul class="js-list"></ul>
       </div>
     </div>
