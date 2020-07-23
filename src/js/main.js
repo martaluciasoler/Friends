@@ -36,6 +36,7 @@ function getData() {
         });
       }
       renderUsers(users);
+      getNamesArray();
     });
 }
 getData();
@@ -51,14 +52,14 @@ function renderUsers(array) {
     if (array[i].isFriend === true) {
       codeHTML += `<li  class="js-userList pink list" data-id='${array[i].login}'>`;
       codeHTML += `<img class="img" src="${array[i].picture}">`;
-      codeHTML += `<h1 class="name">"${array[i].name}"</h1>`;
-      codeHTML += `<div class="city" >"${array[i].location}"</div>`;
+      codeHTML += `<h1 class="name">${array[i].name}</h1>`;
+      codeHTML += `<div class="city" >${array[i].location}</div>`;
       codeHTML += `<span class= "userName">"${array[i].login}"</span></li>`;
     } else {
       codeHTML += `<li  class="js-userList list" data-id='${array[i].login}'>`;
       codeHTML += `<img class="img" src="${array[i].picture}">`;
-      codeHTML += `<h1 class="name">"${array[i].name}"</h1>`;
-      codeHTML += `<div class="city">"${array[i].location}"</div>`;
+      codeHTML += `<h1 class="name">${array[i].name}</h1>`;
+      codeHTML += `<div class="city">${array[i].location}</div>`;
       codeHTML += `<span class= "userName">"${array[i].login}"</span></li>`;
     }
   }
@@ -108,4 +109,9 @@ buttonGetData.addEventListener('click', getFromLocal);
 function getFromLocal() {
   const localFriends = JSON.parse(localStorage.getItem('usersFriends'));
   renderUsers(localFriends); // llamo a FUNCTION RENDERUSER y le doy como parametro ( LOCALFRIENDS (personas guardadas en LOCAL ESTORAGE))
+}
+
+function getNamesArray() {
+  const arrayNamesUsers = users.map((user) => user.name);
+  console.log(arrayNamesUsers);
 }
