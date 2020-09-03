@@ -113,5 +113,4 @@ function getFromLocal() {
 
 function getNamesArray() {
   const arrayNamesUsers = users.map((user) => user.name);
-  console.log(arrayNamesUsers);
 }

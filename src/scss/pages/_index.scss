@@ -1,29 +1,55 @@
 .container {
-  list-style: none;
-  display: flex;
-  font-family: 'pacifico';
-  flex-direction: column;
-  width: 100vw;
   align-items: center;
-  justify-content: center;
-  list-style: none;
   background-color: rgb(184, 68, 97);
+  display: flex;
+  flex-direction: column;
+
+  .friend {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    padding: 15px;
+    grid-gap: 50px;
+  }
+
+  &__list {
+    text-align: center;
+
+    .list {
+      padding-bottom: 5px;
+      padding-top: 5px;
+      width: 180px;
+      background-color: rgba(255, 211, 222, 0.836);
+      margin: 10px;
+      border-radius: 30px;
+    }
+    .img {
+      width: 126px;
+      height: 180px;
+      background-color: #5cb85c;
+      -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+    .pink {
+      background-color: $color-primary;
+    }
+  }
 
   &__buttons {
     display: flex;
-    flex-direction: row;
-    padding-top: 50px;
-    justify-content: center;
+
+    padding: 40px;
     align-items: center;
-    background-color: $color-secondary;
-    width: 100%;
-    padding-bottom: 40px;
+    background-color: $color-primary;
+    border-radius: 50px;
+    margin-top: 15px;
 
     &--tittle {
       font-size: 50px;
-      margin-right: 200px;
       color: rgb(252, 196, 210);
       padding-right: 50px;
+      margin-right: 70px;
     }
     &--set {
       margin-right: 30px;
@@ -33,42 +59,28 @@
       border-color: white;
       color: white;
       font-family: 'pacifico';
-      height: 40px;
-      width: 100px;
+      height: 70px;
+      padding: 5px;
       font-family: 'Amatic SC', cursive;
       font-size: 20px;
+      margin-left: 80px;
     }
     &--get {
       margin-right: 30px;
-      text-overflow: clip;
       border-radius: 6px;
       background-color: $color-primary;
       border-color: white;
       color: white;
-      height: 40px;
-      width: 100px;
+      height: 70px;
+      padding: 5px;
       font-family: 'Amatic SC', cursive;
       font-size: 20px;
-    }
-  }
-
-  &__list {
-    text-align: center;
-    padding-right: 20px;
-
-    .list {
-      padding-bottom: 20px;
-      padding-top: 30px;
-    }
-
-    .img {
-      border-radius: 100%;
     }
   }
 }
 
 .pink {
-  background-color: $color-primary;
+  background-color: black;
 }
 
 //CORAZON
@@ -81,7 +93,7 @@
   transform: rotate(-45deg);
   position: absolute;
   left: 47%;
-  top: 8%;
+  top: 7%;
   width: 50px;
 }
 
